@@ -1,0 +1,284 @@
+/* 1. Basic settings for the whole page */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f5f8fc;
+  line-height: 1.6;
+}
+
+/* 2. Navigation bar */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  color: #14213d;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: #334155;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* 3. Welcome section */
+.hero {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.1;
+  margin: 12px 0 20px;
+}
+
+.hero-text > p:not(.eyebrow) {
+  color: #526078;
+  max-width: 520px;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  max-height: 390px;
+  object-fit: show the whole picture;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+}
+
+/* 4. Buttons */
+.button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 22px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
+
+/* 5. About and services sections */
+.content-section {
+  padding: 65px 24px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.content-section > p:not(.eyebrow) {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #526078;
+}
+
+.content-section h2,
+.contact-section h2 {
+  font-size: 2rem;
+  margin-top: 8px;
+}
+
+.services {
+  background: #edf4ff;
+}
+
+.cards {
+  max-width: 1100px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  text-align: left;
+}
+
+.card {
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #dce6f5;
+  border-radius: 12px;
+}
+
+.card h3 {
+  color: #2563eb;
+  margin-top: 0;
+}
+
+.card p {
+  color: #526078;
+}
+
+/* 6. Contact area and footer */
+.contact-section {
+  padding: 60px 24px;
+  text-align: center;
+  color: #ffffff;
+  background: #14213d;
+}
+
+.button-light {
+  color: #14213d;
+  background: #ffffff;
+}
+
+.button-light:hover {
+  color: #14213d;
+  background: #dbeafe;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: #cbd5e1;
+  background: #0b1224;
+}
+
+/* 7. Adjust the layout for phones */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    margin: 10px auto;
+    padding: 30px 22px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+/* Personal profile section */
+.profile-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px 24px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid #dbeafe;
+}
+
+.profile-text h2 {
+  color: #14213d;
+}
+
+.profile-text p:not(.eyebrow) {
+  color: #526078;
+}
+
+@media (max-width: 700px) {
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+  }
+}
+
+}
+/* Personal profile section */
+.profile-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px 24px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid #dbeafe;
+}
+
+.profile-text h2 {
+  color: #14213d;
+}
+
+.profile-text p:not(.eyebrow) {
+  color: #526078;
+}
+
+@media (max-width: 700px) {
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+  }
+}

@@ -1,0 +1,34 @@
+# Terraform local files and state
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local credentials and secrets
+.env
+.env.*
+*.pem
+*.key
+.terraformrc
+terraform.rc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build archives and Terraform plans
+*.tar.gz
+*.zip
+*.tfplan
+*.plan
+*.log
+
+# Personal photo excluded from public GitHub repository
+/images/website-photo.jpg
