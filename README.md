@@ -60,3 +60,43 @@ The Terraform files in this repository belong to the AWS S3 hosting lab and shou
 - Add a database for persistent data.
 - Implement secure form handling and authentication.
 - Automate deployment with a CI/CD pipeline.
+
+## Architecture Diagram
+
+CloudSite runs on an Ubuntu Lightsail instance. Nginx listens on
+HTTP port 80 and HTTPS port 443. HTTP requests are redirected to
+HTTPS, and Nginx serves the static website files.
+
+```mermaid
+flowchart TD
+    Browser[Visitor browser]
+    Server[Amazon Lightsail Ubuntu server]
+    HTTP[Nginx HTTP listener - port 80]
+    HTTPS[Nginx HTTPS listener - port 443]
+    Cert[Let's Encrypt certificate managed by Certbot]
+    Files[HTML, CSS, and website images]
+
+    Browser -->|HTTP request| Server
+    Server --> HTTP
+    HTTP -->|301 redirect to HTTPS| Browser
+
+    Browser -->|HTTPS request| Server
+    Server --> HTTPS
+    Cert -. TLS certificate .-> HTTPS
+    HTTPS --> Files
+```
+
+## Screenshots
+
+### CloudSite homepage
+
+![CloudSite homepage screenshot](docs/images/cloudsite-homepage.png)
+
+The screenshot shows the portfolio version of the CloudSite website.
+The live website is hosted separately on Amazon Lightsail.
+
+## Infrastructure as Code
+
+The Terraform files in this repository belong to the separate AWS S3
+hosting lab. They should not be interpreted as provisioning the
+Lightsail server shown in the runtime architecture diagram.
